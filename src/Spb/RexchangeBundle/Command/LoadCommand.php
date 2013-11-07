@@ -18,39 +18,37 @@ class LoadCommand extends Command
             ->addArgument(
                 'data-provider',
                 InputArgument::REQUIRED,
-                'Откуда скачивать данные?'
+                'Откуда скачивать данные (bn, eip, emils)?'
             )
             ->addOption(
-                'yell',
-                null,
-                InputOption::VALUE_NONE,
-                'If set, the task will yell in uppercase letters'
-            )
-            ->addOption(
-                'iterations',
-                null,
+                'mode',
+                'm',
                 InputOption::VALUE_REQUIRED,
-                'How many times should the message be printed?',
+                'Только добавить, добавить + обновить, добавить + обновить + сохранить историю?',
                 1
             );;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $dataProvider = $input->getArgument('data-provider');
 
-        if ($names = $input->getArgument('names')) {
-            $text = 'Hello' .' '.implode(', ', $names).'!';
+        switch ($dataProvider) {
+            case 'bn':
+                echo "i равно 0";
+                break;
+            case 'eip':
+                echo "i равно 1";
+                break;
+            case 'emils':
+                echo "i равно 2";
+                break;
+            default:
+                $output->writeln('');
+                $output->writeln('<error>Неправильно указан провайдер данных. (bn, eip, emils)</error>');
+                $output->writeln('');
+                exit;
         }
-
-        if ($input->getOption('yell')) {
-            $text = strtoupper($text);
-        }
-
-        for ($i = 0; $i < $input->getOption('iterations'); $i++) {
-            // green text
-            $output->writeln('<info>'.$text.'</info>');
-        }
-
 
     }
 }
