@@ -1,0 +1,4 @@
+spb_rexchange:
+    resource: "@SpbRexchangeBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+parameters:
+#    spb_rexchange.example.class: Spb\RexchangeBundle\Example
+
+services:
+#    spb_rexchange.example:
+#        class: %spb_rexchange.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
