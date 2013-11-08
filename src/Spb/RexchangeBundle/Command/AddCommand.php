@@ -26,7 +26,7 @@ class AddCommand extends Command
                 InputOption::VALUE_REQUIRED,
                 '1 - добавить новые, 2 - добавить новые + обновить старые, добавить новые + обновить старые + сохранить историю?',
                 1
-            );;
+            );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

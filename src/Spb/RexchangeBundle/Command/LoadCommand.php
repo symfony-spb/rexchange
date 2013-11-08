@@ -8,25 +8,38 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+
 class LoadCommand extends Command
 {
     protected function configure()
     {
         $this
             ->setName('re:load')
-            ->setDescription('Загрузка предложений с сайта')
+            ->setDescription('Загрузка объектов недвижимости с сайта')
             ->addArgument(
                 'data-provider',
                 InputArgument::REQUIRED,
-                'Откуда скачивать данные (bn, eip, emils)?'
+                'Откуда скачивать данные (bn, eip, emils, avito)?'
             )
             ->addOption(
-                'mode',
-                'm',
+                'first-id',
+                'f',
                 InputOption::VALUE_REQUIRED,
-                'Только добавить, добавить + обновить, добавить + обновить + сохранить историю?',
-                1
-            );;
+                'Начальный идентификатор загружаемых страниц'
+            )
+            ->addOption(
+                'last-id',
+                'l',
+                InputOption::VALUE_REQUIRED,
+                'Последний идентификатор загружаемых страниц'
+            )
+            ->addOption(
+                'dir',
+                'd',
+                InputOption::VALUE_REQUIRED,
+                'Директория для загрузки файлов'
+            )
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -38,14 +51,17 @@ class LoadCommand extends Command
                 echo "i равно 0";
                 break;
             case 'eip':
-                echo "i равно 1";
+                $output->writeln('<info>eip - не реализовано</info>');
                 break;
             case 'emils':
-                echo "i равно 2";
+                $output->writeln('<info>emils - не реализовано</info>');
+                break;
+            case 'avito':
+                $output->writeln('<info>avito - не реализовано</info>');
                 break;
             default:
                 $output->writeln('');
-                $output->writeln('<error>Неправильно указан провайдер данных. (bn, eip, emils)</error>');
+                $output->writeln('<error>Неправильно указан провайдер данных. (bn, eip, emils, avito)</error>');
                 $output->writeln('');
                 exit;
         }
