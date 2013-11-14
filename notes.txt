@@ -1,0 +1,14 @@
+Запуск load:bn
+---------------
+
+app/console load:bn flat -d /media/Transcend/data/bn/20131112/
+app/console load:bn root -d /media/Transcend/data/bn/20131112/
+
+Запуск curl
+-----------
+Запускается из директории, куда складируются загружаемые файлы
+ proom> xargs -n 1 curl -O --limit-rate 1M -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' < ../proom.txt
+
+Запуск parse:bn
+---------------
+ app/console parse:bn -d /media/Transcend/data/bn/20131112/proom | mongoimport -d bn_20131112 -c proom
