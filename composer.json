@@ -21,7 +21,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "guzzle/guzzle": "~3.7",
         "twbs/bootstrap": "dev-master",
-        "leafo/lessphp": "dev-master"
+        "leafo/lessphp": "~0.3",
+        "components/jquery": "1.9.*",
+        "heartsentwined/yuicompressor": "2.4.7"
     },
     "scripts": {
         "post-install-cmd": [

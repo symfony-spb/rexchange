@@ -3,17 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {% block stylesheets %}
-            {% stylesheets '@SpbRexchangeBundle/Resources/public/less/style.less' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
+            {% stylesheets '@SpbRexchangeBundle/Resources/public/less/style.less' filter='?yui_css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
         {% endblock %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}
+            {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>
