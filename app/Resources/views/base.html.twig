@@ -5,8 +5,8 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
-            {% stylesheets '@SpbRexchangeBundle/Resources/public/less/style.less' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
+            {% stylesheets '@SpbRexchangeBundle/Resources/public/less/style.less' filter='?yui_css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
         {% endblock %}
 
@@ -14,6 +14,7 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+
         {% block javascripts %}
             {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
                 <script src="{{ asset_url }}"></script>
