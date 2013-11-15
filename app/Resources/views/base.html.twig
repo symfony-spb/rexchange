@@ -16,7 +16,7 @@
         {% block body %}{% endblock %}
 
         {% block javascripts %}
-            {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
+            {% javascripts '@bootstrap_js' filter='?yui_js' combine=true %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
         {% endblock %}

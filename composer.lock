@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e7f9a6740db6ac60223ce796691fac69",
+    "hash": "25875a135c606d0aa1ed59718a80a61b",
     "packages": [
         {
             "name": "components/jquery",
@@ -49,6 +49,52 @@
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
             "time": "2013-07-16 10:41:05"
+        },
+        {
+            "name": "devtime/backbone-bundle",
+            "version": "dev-master",
+            "target-dir": "Devtime/BackboneBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gigo6000/DevtimeBackboneBundle.git",
+                "reference": "34c9ed708920770aaa699c04185a1208debf4d06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gigo6000/DevtimeBackboneBundle/zipball/34c9ed708920770aaa699c04185a1208debf4d06",
+                "reference": "34c9ed708920770aaa699c04185a1208debf4d06",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": ">=2.1.1",
+                "symfony/finder": ">=2.1.1",
+                "symfony/framework-bundle": ">=2.1.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Devtime\\BackboneBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos Mafla",
+                    "email": "gigo6000@hotmail.com"
+                }
+            ],
+            "description": "Easily setup and use backbone.js with Symfony2",
+            "homepage": "http://github.com/gigo6000/DevtimeBackboneBundle",
+            "keywords": [
+                "Symfony2",
+                "backbone",
+                "backbone.js",
+                "underscore"
+            ],
+            "time": "2013-05-24 23:53:35"
         },
         {
             "name": "doctrine/annotations",
@@ -1551,16 +1597,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.6",
+            "version": "v2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0"
+                "reference": "2829b471871c2564228fe9f0832a0f928a8ffaa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/d0597156c4c03ceca039f6b7770a47397ba295f0",
-                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/2829b471871c2564228fe9f0832a0f928a8ffaa1",
+                "reference": "2829b471871c2564228fe9f0832a0f928a8ffaa1",
                 "shasum": ""
             },
             "require": {
@@ -1655,7 +1701,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-10-10 13:24:22"
+            "time": "2013-11-14 07:58:51"
         },
         {
             "name": "twbs/bootstrap",
@@ -1663,12 +1709,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "c1c2a8e18867bfa1644928428c693b367a5617a1"
+                "reference": "27b62d39e2ba62e2d70ef2f5322edd584adc726e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c1c2a8e18867bfa1644928428c693b367a5617a1",
-                "reference": "c1c2a8e18867bfa1644928428c693b367a5617a1",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/27b62d39e2ba62e2d70ef2f5322edd584adc726e",
+                "reference": "27b62d39e2ba62e2d70ef2f5322edd584adc726e",
                 "shasum": ""
             },
             "type": "library",
@@ -1697,7 +1743,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2013-11-11 22:44:40"
+            "time": "2013-11-14 09:14:06"
         },
         {
             "name": "twig/extensions",
@@ -1804,7 +1850,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "twbs/bootstrap": 20
+        "twbs/bootstrap": 20,
+        "devtime/backbone-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
