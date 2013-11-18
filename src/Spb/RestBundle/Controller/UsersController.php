@@ -21,9 +21,9 @@ class UsersController extends Controller
     {
         /**
          * @return array
-         * @View()
+         * @View:()
          */
-        $users = $this->getDoctrine()->getRepository('RestBundle:Users')
+        $users = $this->getDoctrine()->getRepository('SpbRestBundle:User')
             ->findAll();
 
         return array('users' => $users);

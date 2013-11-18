@@ -1,11 +1,7 @@
 spb_rest:
-    resource: "@SpbRestBundle/Controller/"
+    resource: "@SpbRestBundle/Resources/config/routing.yml"
     type:     annotation
     prefix:   /
-
-users:
-    type: rest
-    resource: Spb\RestBundle\Controller\UsersController
 
 spb_rexchange:
     resource: "@SpbRexchangeBundle/Resources/config/routing.yml"
